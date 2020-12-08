@@ -5,14 +5,13 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'sostoragels05'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'xUbHTcZl3mNC3vaIVFAseXSLN0mF906DTQGHR4OzoayPTDMOsV6VlHiqCigOmXOoWjxZx9cbqnelWFuo1tMzKg=='
-    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'sol-blob-container-ls05'
-
-    SQL_SERVER = os.environ.get('SQL_SERVER') or 'sol-udacity-sql-ls05.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'sol-udacity-ls-05'
-    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityadmin'
-    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Silence4Udacity'
+    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') 
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') 
+    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER')
+    SQL_SERVER = os.environ.get('SQL_SERVER') 
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') 
+    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') 
+    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') 
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
